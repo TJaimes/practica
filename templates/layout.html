@@ -1,26 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-{% block head %}
-<head>
-  <meta charset="utf-8">
-  <title>{% block titulo %} {% endblock %}</title>
-</head>
-{% endblock %}
+  {% block head %}
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block titulo %} {% endblock %}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  {% endblock %} {% block body %}
+  <body>
+    {% block encabezado %}
+    <h1>Inicio</h1>
+    {% endblock %} {% block contenido %} {% endblock %} {% block pie %}
+    <p>Tairi Jaimes-Servicios en la Nube</p>
+    {% endblock %}
+  </body>
+  {% endblock %}
 
-{% block body %}
-<body>
-
-{% block encabezado %}
-<h1>Inicio</h1>
-{% endblock %}
-
-{% block contenido %}
-{% endblock %}
-
-{% block pie %}
-<p> Tairi Jaimes-Servicios en la Nube</p>
-{% endblock %}
-
-</body>
-{% endblock %}
+  <footer>
+    <div class="social_networks">
+      <a href="#" class="item">
+        <box-icon name="facebook" type="logo"></box-icon>
+      </a>
+      <a href="#" class="item">
+        <box-icon name="instagram" type="logo"></box-icon>
+      </a>
+      <a href="#" class="item">
+        <box-icon name="twitter" type="logo" color="#0c0c0c"></box-icon>
+      </a>
+    </div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="copyright">© 2021 Tairi Jaime.</div>
+  </footer>
+  <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 </html>
