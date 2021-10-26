@@ -13,10 +13,83 @@ body{
     position: relative;
     min-height: 100vh;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    overflow-x: hidden;
 }
 
-footer{
+.hero{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::before{
+    content: '';
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.png");
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.7) contrast(110%);
+    background-attachment: fixed;
+}
+.contenido{
+    width: 80%;
+    display: flex;
+    color: white;
+}
+.contenido .info{
+    width: 70%;
+}
+.info .nombre{
+    font-size: 5.5rem;
+    font-family: 'Staatliches', cursive;
+}
+
+.info .descripcion{
+    font-size: 1.5rem;
+    padding-right: 50px;
+    margin-bottom: 20px;
+}
+
+.info button{
+    outline: none;
+    background: none;
+    border: 1px solid white;
+    font-size: 1rem;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.info button:hover{
+    background-color: white;
+}
+
+.info button:hover a{
+    color: black;
+}
+
+.info button a{
+    color: white;
+    text-decoration: none;
+}
+
+.contenido .imagen{
+    width: 30%;;
+}
+
+.contenido .imagen img{
+    width: 100%;
+    border-radius: 10000px;
+}
+
+
+
+footer{
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;

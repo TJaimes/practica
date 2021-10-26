@@ -1,13 +1,25 @@
-{% extends "layout.html" %}
-
-{% block titulo %} Página principal {% endblock %}
-
-
+{% extends "layout.html" %} {% block titulo %} Página principal {% endblock %}
 {% block contenido %}
- <p>Bienvenido</p>
- <p>Te encuentras en la página principal <a href= "/about">About</a></p>
- <p>Lista</p>
- {% for nombre in variable %}
-   <p>{{nombre}}</p>
- {% endfor %}
-{% endblock %}
+
+
+<div class="hero">
+  <div class="contenido">
+    <div class="info">
+      <p class="nombre">Tairi Jaimes</p>
+      <div class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero quidem officia, aspernatur enim in nesciunt, unde, soluta nemo reprehenderit placeat rem. Reiciendis cupiditate harum ratione neque facilis, repellat a.</div>
+      <button>
+        <a href="/about">Acerca de mi</a>
+      </button>
+    </div>
+    <div class="imagen">
+      <img src="{{ url_for('static', filename='img/tairi.jpg') }}" alt="Tairi Jaimes">
+    </div>
+  </div>
+</div>
+
+<p>Bienvenido</p>
+<p>Te encuentras en la página principal <a href="/about">About</a></p>
+<p>Lista</p>
+{% for nombre in variable %}
+<p>{{nombre}}</p>
+{% endfor %} {% endblock %}
